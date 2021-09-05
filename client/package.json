@@ -7,11 +7,12 @@
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
     "mml-react": "^0.4.0",
+    "node": "^16.6.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "^1.1.5",
     "stream-chat": "^4.1.0",
-    "stream-chat-react": "^0.6.26",
+    "stream-chat-react": "^0.6.27",
     "universal-cookie": "^4.0.4",
     "web-vitals": "^1.1.2"
   },
