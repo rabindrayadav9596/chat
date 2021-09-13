@@ -60,12 +60,12 @@ const ChannelListContainer = () => {
                         />
 
                     )}
-                    // Preview = {(previewProps)=>(
-                    //     <TeamChannelPreview
-                    //         {...previewProps}
-                    //         type = "team"
-                    //     />
-                    // )}
+                    Preview = {(previewProps)=>(
+                        <TeamChannelPreview
+                            {...previewProps}
+                            type = "team"
+                        />
+                    )}
 
                     />
 
@@ -79,12 +79,12 @@ const ChannelListContainer = () => {
                         />
 
                     )}
-                    // Preview = {(previewProps)=>(
-                    //     <TeamChannelPreview
-                    //         {...previewProps}
-                    //         type = "messaging"
-                    //     />
-                    // )}
+                    Preview = {(previewProps)=>(
+                        <TeamChannelPreview
+                            {...previewProps}
+                            type = "messaging"
+                        />
+                    )}
 
                     />
            </div>
