@@ -11,6 +11,8 @@ const initialState = {
     phoneNumber: "",
 }
 
+const cookies = new Cookies();
+
 const Auth = () => {
     const [form, setForm] = useState();
     const [isSignup, setIsSignup] = useState(true);
@@ -22,8 +24,27 @@ const Auth = () => {
         setIsSignup((prevIsSignup) => !prevIsSignup)
     }
 
-    const handleSubmit = (e) =>{
+    const handleSubmit = async (e) =>{
         e.preventDefault();
+        const {fullName, username, password, phoneNumber} = form;
+        const URL = "http://localhost:5000/auth";
+        const {data : {token, userId, hashedPassword}} = await axios.post(`${URL}/${isSignup ? 'signup': 'login'}`, {
+            username, password, fullName, phoneNumber
+        });
+
+        cookies.set('token', token);
+        cookies.set('username', username);
+        cookies.set('fullName', fullName);
+        cookies.set('userId', userId);
+
+        if(isSignup){
+            cookies.set('phoneNumber', phoneNumber);
+            cookies.set('hashedPassword', hashedPassword);
+        }
+
+        window.location.reload();
+        
+
         
     }
     return (
