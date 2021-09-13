@@ -1,5 +1,5 @@
 import React from 'react';
-import { Avatar, useChatContext } from 'stream-chat-react';
+import { useChatContext } from 'stream-chat-react';
 
 
 const TeamChannelPreview = ({channel,type}) => {
@@ -14,11 +14,7 @@ const TeamChannelPreview = ({channel,type}) => {
         const members = Object.values(channel.state.members).filter(({user}) => user.id !== client.userID);
         return (
             <div className="channe-preview__item single">
-                <Avatar
-                    image = {members[0].user.image}
-                    name = {members[0].user.fullName}
-                    size = {24}
-                    />
+                
                 <p>
                 {members[0].user.fullName}
                 </p>
